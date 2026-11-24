@@ -1,0 +1,11 @@
+# fotos originais enviadas pelo WhatsApp (as versões usadas estão em assets/img)
+*.jfif
+
+# NÃO PUBLICAR: foto de atendimento com rostos de paciente e responsável visíveis.
+# Só pode ir ao ar com autorização de uso de imagem assinada.
+assets/img/foto-3.jpg
+
+# sistema
+Thumbs.db
+desktop.ini
+.DS_Store
