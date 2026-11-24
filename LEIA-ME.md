@@ -57,15 +57,37 @@ está sendo usada**: imagem de paciente só pode ir ao ar com autorização de u
 imagem assinada. O mesmo vale para a `foto-4.jpg`, em que a criança aparece de
 costas — confirme a autorização antes de publicar.
 
-## Publicar
+## No ar
 
-Qualquer hospedagem de site estático serve. As gratuitas mais simples:
+O site está publicado no GitHub Pages:
 
-1. **Netlify Drop** — arraste a pasta inteira para `app.netlify.com/drop`.
-2. **GitHub Pages** — suba a pasta em um repositório e ative Pages.
-3. **Vercel** — importe a pasta, sem configuração.
+**https://vitor-almeidas2.github.io/claudenice-bezerra-psicologa/**
 
-Depois é só apontar o domínio próprio, se houver.
+Repositório: `Vitor-AlmeidaS2/claudenice-bezerra-psicologa` (público).
+
+### Atualizar o site
+
+Depois de mudar qualquer arquivo, rode na pasta do projeto:
+
+```powershell
+git add -A; if ($?) { git commit -m "descreva a mudanca" }; if ($?) { git push }
+```
+
+O GitHub republica sozinho em um ou dois minutos.
+
+### Domínio próprio
+
+Se um dia houver um domínio (ex.: `claudenicebezerra.com.br`), é só apontá-lo
+para o GitHub Pages nas configurações do repositório. Nesse caso, troque também
+o endereço que aparece em três lugares do `index.html`: `rel="canonical"`,
+`og:url` e `og:image` — são eles que montam a prévia quando o link é
+compartilhado no WhatsApp.
+
+### O que não vai para o ar
+
+O `.gitignore` deixa de fora as fotos originais `.jfif` e a `assets/img/foto-3.jpg`
+(atendimento com rostos visíveis). O repositório é público: tudo que estiver nele
+fica acessível por um endereço, mesmo que não apareça no site.
 
 ## Ver no computador
 
