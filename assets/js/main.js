@@ -22,14 +22,16 @@ const MENSAGENS = {
   agendar:   'Olá, Claudenice! Vim pelo site e gostaria de agendar um atendimento.',
   avaliacao: 'Olá, Claudenice! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.',
   tea:       'Olá, Claudenice! Vim pelo site e gostaria de conversar sobre um atendimento voltado ao TEA.',
-  palestra:  'Olá, Claudenice! Vim pelo site e gostaria de uma proposta de palestra ou curso.'
+  palestra:  'Olá, Claudenice! Vim pelo site e gostaria de uma proposta de palestra ou curso.',
+  domicilio: 'Olá, Claudenice! Vim pelo site e gostaria de saber sobre o atendimento a domicílio.'
 };
 
 const ASSUNTOS = {
   agendar:   'Agendamento de atendimento',
   avaliacao: 'Avaliação neuropsicológica',
   tea:       'Atendimento em autismo (TEA)',
-  palestra:  'Palestra ou curso'
+  palestra:  'Palestra ou curso',
+  domicilio: 'Atendimento a domicílio'
 };
 
 const temWhats = () => /^\d{12,13}$/.test(CONTATO.whatsapp.trim());
@@ -94,18 +96,18 @@ document.addEventListener('keydown', (e) => {
    3. Header com sombra ao rolar + botão flutuante
 ------------------------------------------------------------ */
 const header = document.querySelector('.site-header');
-const floatCta = document.querySelector('.float-cta');
+const floatAcoes = document.querySelector('.float-acoes');
 const contato = document.getElementById('contato');
 
 function aoRolar() {
   const y = window.scrollY;
   header.classList.toggle('is-stuck', y > 8);
 
-  if (floatCta) {
+  if (floatAcoes) {
     const contatoVisivel = contato
       ? contato.getBoundingClientRect().top < window.innerHeight * 0.9
       : false;
-    floatCta.classList.toggle('is-visivel', y > 620 && !contatoVisivel);
+    floatAcoes.classList.toggle('is-visivel', y > 620 && !contatoVisivel);
   }
 }
 

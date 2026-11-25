@@ -42,6 +42,12 @@ Google Maps com o endereço escrito na busca. Se um endereço mudar, troque o te
 do card **e** o endereço dentro do link do mapa — e também no bloco
 `application/ld+json` no fim do arquivo, que é o que o Google lê.
 
+## Botões flutuantes
+
+No canto inferior direito ficam dois botões, que aparecem depois que a pessoa
+rola a página: o do Instagram e o do WhatsApp. Estão no fim do `index.html`,
+dentro de `<div class="float-acoes">`.
+
 ## Trocar as fotos
 
 Substitua os arquivos em `assets/img/` mantendo os mesmos nomes
